@@ -18,3 +18,6 @@ Apache Commons Collections implement interfaces of abstract data structures. To 
 ## Testing Tools
 
 `AssertJ` would be used as a testing framework, `Apache Ant` as a build system and `Jenkins` as a continuous integration framework. The testing procedures would be automated.
+
+## Code Style
+All code must be formatted with Google's Java Style for consistency.
