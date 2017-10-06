@@ -1,0 +1,22 @@
+# gradle
+.gradle
+/build/
+
+# java
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+*.war
+*.ear
+*.zip
+
+# eclipse
+*.classpath
+*.project
+*.settings
+/bin
+
+# vim
+*.sw[op]
+
+
