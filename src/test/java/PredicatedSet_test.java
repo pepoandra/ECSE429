@@ -1,7 +1,5 @@
 // test framework imports
 import org.junit.Test;
-import org.apache.commons.collections4.Predicate;
-import org.apache.commons.collections4.set.PredicatedSet;
 import org.junit.After;
 import static org.assertj.core.api.Assertions.*;
 
@@ -9,6 +7,8 @@ import static org.assertj.core.api.Assertions.*;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import org.apache.commons.collections4.Predicate;
+import org.apache.commons.collections4.set.PredicatedSet;
 import static org.apache.commons.collections4.set.PredicatedSet.predicatedSet;
 
 public class PredicatedSet_test 
