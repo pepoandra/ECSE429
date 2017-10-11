@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import static org.apache.commons.collections4.SetUtils.*;
 
-public class SetUtilsTest 
+public class SetUtils_test 
 {
 	/* Set is an interface, in order to test SetUtils
 	 * we must test its methods on a class implementing Set

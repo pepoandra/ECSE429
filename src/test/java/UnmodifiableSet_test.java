@@ -10,9 +10,9 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.apache.commons.collections4.set.UnmodifiableSet.unmodifiableSet;;
+import static org.apache.commons.collections4.set.UnmodifiableSet.unmodifiableSet;
 
-public class UnmodifiableSetTest 
+public class UnmodifiableSet_test 
 {
 	private Set<Integer> a, b;
 	
