@@ -37,7 +37,7 @@ public class SetUtilsTest
 	@After
 	public void destroy_set_objects()
 	{
-		a = b = null;
+		a = b = c = null;
 	}
 	
 	// repetitive checks at the beginning of each test case
