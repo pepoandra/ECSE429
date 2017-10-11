@@ -9,23 +9,36 @@ dependencies
 {
     testImplementation 'junit:junit:4.12'
     testCompile group: 'org.assertj', name: 'assertj-core', version: '3.8.0'
+	compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.1'
 }
 
 test
 {
-    afterTest { desc, result -> 
-        logger.quiet "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
+	dependsOn clean
+    testLogging.showStandardStreams = true
+    testLogging.exceptionFormat = 'full'
+    
+    afterTest 
+    { 
+    	desc, result -> 
+        logger.quiet "Class: ${desc.className}   Test: ${desc.name}   Result: ${result.resultType}"
     }
+    
 	reports
 	{
 		junitXml.enabled = true
 		html.enabled = true
 	}
-	testLogging {
-    afterSuite { desc, result ->
-      if (!desc.parent) { // will match the outermost suite
-        println "Results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} successes, ${result.failedTestCount} failures, ${result.skippedTestCount} skipped)"
-      }
+	
+	testLogging 
+	{
+		afterSuite { desc, result ->
+      	if (!desc.parent) 
+      	{
+        	println "\nFinal Results: ${result.resultType} (${result.testCount} tests," \
+        			+ " ${result.successfulTestCount} successes, ${result.failedTestCount} failures," \
+        			+ " ${result.skippedTestCount} skipped)\n"
+      	}
     }
   }
 }
