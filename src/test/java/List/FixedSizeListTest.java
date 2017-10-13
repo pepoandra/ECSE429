@@ -2,7 +2,7 @@ package List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.collections4.list.FixedSizeList;
@@ -21,7 +21,9 @@ public class FixedSizeListTest {
 
     @Before
     public void initObjects() {
-        listA = Arrays.asList(1, 2, 3, 4, 5);
+        listA = new ArrayList<Integer>();
+        for (int i = 1; i < 6; i++)
+            listA.add(i);
         a = FixedSizeList.fixedSizeList(listA);
     }
 

@@ -17,7 +17,7 @@ public class GrowthListTest {
 
     @Before
     public void initObjects() {
-        a = new GrowthList(2);
+        a = new GrowthList<Integer>(2);
     }
 
     @Test
