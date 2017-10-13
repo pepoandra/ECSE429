@@ -92,20 +92,20 @@ public class LazyListTest {
         destroyObjects();
     }
 
-    @Test
-    public void testGetLazy() {
-        initObjects();
-
-        a.get(50);
-
-        destroyObjects();
-    }
-
     @Test(expected = AssertionError.class)
     public void testGetFail() {
         initObjects();
 
         assertThat(a).element(1).isEqualTo(3);
+
+        destroyObjects();
+    }
+
+    @Test
+    public void testGetLazy() {
+        initObjects();
+
+        a.get(50);
 
         destroyObjects();
     }
