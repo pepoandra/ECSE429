@@ -30,118 +30,70 @@ public class SetUniqueListTest {
 
     @Test
     public void testAdd() {
-        initObjects();
-
         a.add(new Integer(5));
-
-        destroyObjects();
     }
 
     @Test
     public void testAddPosition() {
-        initObjects();
-
         a.add(0, new Integer(5));
         assertThat(a).element(4).isEqualTo(new Integer(5));
-
-        destroyObjects();
     }
 
     @Test
     public void testAddPositionUnique() {
-        initObjects();
-
         a.add(0, new Integer(6));
         int size = a.size();
         a.add(0, new Integer(6));
 
         assertThat(size).isEqualTo(a.size());
-
-        destroyObjects();
     }
 
     @Test
     public void testAddUnique() {
-        initObjects();
-
         a.add(new Integer(5));
         int size = a.size();
         a.add(new Integer(5));
         assertThat(size).isEqualTo(a.size());
-
-        destroyObjects();
     }
 
     @Test
     public void testContains() {
-        initObjects();
-
         assertThat(a).contains(1);
-
-        destroyObjects();
     }
 
     @Test(expected = AssertionError.class)
     public void testContainsFail() {
-        initObjects();
-
         assertThat(a).contains(7);
-
-        destroyObjects();
     }
 
     @Test
     public void testEmpty() {
-        initObjects();
-
         assertThat(a).isNotEmpty();
-
-        destroyObjects();
     }
 
     @Test(expected = AssertionError.class)
     public void testEmptyFail() {
-        initObjects();
-
         assertThat(a).isEmpty();
-
-        destroyObjects();
     }
 
     @Test
     public void testGet() {
-        initObjects();
-
         assertThat(a).element(2).isEqualTo(new Integer(3));
-
-        destroyObjects();
     }
 
     @Test(expected = AssertionError.class)
     public void testGetFail() {
-        initObjects();
-
         assertThat(a).element(1).isEqualTo(3);
-
-        destroyObjects();
     }
 
     @Test
     public void testRemovePosition() {
-        initObjects();
-
         a.add(0, new Integer(5));
         a.remove(0);
-
-        destroyObjects();
     }
 
     @Test
     public void testSize() {
-        initObjects();
-
         assertThat(a).hasSize(listA.size());
-
-        destroyObjects();
     }
 }
