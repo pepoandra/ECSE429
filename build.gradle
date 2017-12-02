@@ -5,6 +5,14 @@ repositories
      jcenter()
 }
 
+sourceSets {
+    test {
+        java {
+            srcDirs = ['src/test']
+        }
+    }
+}
+
 dependencies 
 {
     testImplementation 'junit:junit:4.12'
