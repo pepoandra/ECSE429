@@ -30,7 +30,8 @@ public class BagUtils_test {
 	@Test
 	public void test_collectionBag()
 	{
-		Bag<Object> bag = BagUtils.collectionBag(new HashBag<>());
+		HashBag h = new HashBag<>();
+		Bag<Object> bag = BagUtils.collectionBag(h);
 		
 		assertThat(bag).as("Object is a CollectionBag").isInstanceOf(CollectionBag.class);
 	}
@@ -52,7 +53,8 @@ public class BagUtils_test {
 	@Test
 	public void test_predicatedBag()
 	{
-		Bag<Object> bag = BagUtils.predicatedBag(new HashBag<>(), truePredicate);
+		HashBag h = new HashBag<>();
+		Bag<Object> bag = BagUtils.predicatedBag(h, truePredicate);
 		
 		assertThat(bag).as("Object is a PredicatedBag").isInstanceOf(PredicatedBag.class);
 	}
@@ -60,7 +62,8 @@ public class BagUtils_test {
 	@Test
 	public void test_predicatedSortedBag()
 	{
-		Bag<Object> bag = BagUtils.predicatedSortedBag(new TreeBag<>(), truePredicate);
+		TreeBag t = new TreeBag<>();
+		Bag<Object> bag = BagUtils.predicatedSortedBag(t, truePredicate);
 		
 		assertThat(bag).as("Object is a PredicatedSortedBag").isInstanceOf(PredicatedSortedBag.class);
 	}
@@ -68,7 +71,8 @@ public class BagUtils_test {
 	@Test
 	public void test_synchronizedBag()
 	{
-		Bag<Object> bag = BagUtils.synchronizedBag(new HashBag<>());
+		HashBag h = new HashBag<>();
+		Bag<Object> bag = BagUtils.synchronizedBag(h);
 		
 		assertThat(bag).as("Object is a SynchronizedBag").isInstanceOf(SynchronizedBag.class);
 	}
@@ -76,7 +80,8 @@ public class BagUtils_test {
 	@Test
 	public void test_synchronizedSortedBag()
 	{
-		Bag<Object> bag = BagUtils.synchronizedSortedBag(new TreeBag<>());
+		TreeBag t = new TreeBag<>();
+		Bag<Object> bag = BagUtils.synchronizedSortedBag(t);
 		
 		assertThat(bag).as("Object is a SynchronizedSortedBag").isInstanceOf(SynchronizedSortedBag.class);
 	}
@@ -84,7 +89,8 @@ public class BagUtils_test {
 	@Test
 	public void test_transformingBag()
 	{
-		Bag<Object> bag = BagUtils.transformingBag(new HashBag<>(), nopTransformer);
+		HashBag h = new HashBag<>();
+		Bag<Object> bag = BagUtils.transformingBag(h, nopTransformer);
 		
 		assertThat(bag).as("Object is a TransformingBag").isInstanceOf(TransformedBag.class);
 	}
@@ -92,7 +98,8 @@ public class BagUtils_test {
 	@Test
 	public void test_transformingSortedBag()
 	{
-		Bag<Object> bag = BagUtils.transformingSortedBag(new TreeBag<>(), nopTransformer);
+		TreeBag t = new TreeBag<>();
+		Bag<Object> bag = BagUtils.transformingSortedBag(t, nopTransformer);
 		
 		assertThat(bag).as("Object is a TransformingSortedBag").isInstanceOf(TransformedSortedBag.class);
 	}
@@ -100,7 +107,8 @@ public class BagUtils_test {
 	@Test
 	public void test_unmodifiableBag()
 	{
-		Bag<Object> bag = BagUtils.unmodifiableBag(new HashBag<>());
+		HashBag h = new HashBag<>();
+		Bag<Object> bag = BagUtils.unmodifiableBag(h);
 		
 		assertThat(bag).as("Object is a UnmodifiableBag").isInstanceOf(UnmodifiableBag.class);
 	}
@@ -108,7 +116,8 @@ public class BagUtils_test {
 	@Test
 	public void test_unmodifiableSortedBag()
 	{
-		Bag<Object> bag = BagUtils.unmodifiableSortedBag(new TreeBag<>());
+		TreeBag t = new TreeBag<>();
+		Bag<Object> bag = BagUtils.unmodifiableSortedBag(t);
 		
 		assertThat(bag).as("Object is a UnmodifiableSortedBag").isInstanceOf(UnmodifiableSortedBag.class);
 	}
